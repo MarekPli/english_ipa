@@ -65,8 +65,8 @@ def transform_list(txt):
 root = tk.Tk()
 root.title("IPA reading of English text")
 root.geometry("+5+5")
-txt1 = tk.Text(root, height=8, wrap='word', font=('Times', 16))
-txt2 = tk.Text(root, wrap='word',font=('Times', 16))
+txt1 = tk.Text(root, height=8, wrap='word', font=('Times', 16), padx=10)
+txt2 = tk.Text(root, wrap='word',font=('Times', 16), padx=10)
 txt2.tag_configure('bold', font=('Times', 16, 'bold'))
                        
     

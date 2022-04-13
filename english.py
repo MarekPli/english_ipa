@@ -10,14 +10,6 @@ As of some one gently rapping, rapping at my chamber door.
 "'Tis some visitor," I muttered, "tapping at my chamber door-
 Only this and nothing more."
 """
-
-# s_origin = """
-# Even though Alexander was talking about patterns in buildings and towns, 
-# what he says is true about object-oriented design patterns. 
-# Our solutions are expressed in terms of objects and interfaces instead of walls and doors, 
-# but at the core of both kinds of patterns is a solution to a problem in a context.
-# """
-
 def comma_use(lst):
     if lst[0][-1] not in ",.-;": # not only alpha, because IPA is not only alpha
         return f"[{', '.join(lst)}]"

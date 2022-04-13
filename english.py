@@ -21,13 +21,24 @@ def transforming(fun, *args, **kwargs):
         txt = txt1.get("0.1", tk.END)
         result = ''
         lst = txt.split('\n')
+        txt2.delete("0.1",tk.END)
         for s in lst:
             s = re.sub('-', '- ', s)
             s = s.strip()
             if s:
                 result += fun(s, *args, **kwargs)
-        txt2.delete("0.1",tk.END)
-        txt2.insert(tk.END,result)
+        
+        lsts = result.split('\n\n')
+        if len(lsts) > 1:
+            for lst in lsts:
+                s = lst.split('\n')
+                if len(s) > 1:
+                    txt2.insert(tk.END,s[0] + '\n', 'bold')
+                    txt2.insert(tk.END,s[1] + '\n\n')
+                else: 
+                    txt2.insert(tk.END,lst + '\n')
+        else:
+            txt2.insert(tk.END,result)
     return inner
 
 @transforming
@@ -56,6 +67,9 @@ root.title("IPA reading of English text")
 root.geometry("+5+5")
 txt1 = tk.Text(root, height=8, wrap='word', font=('Times', 16))
 txt2 = tk.Text(root, wrap='word',font=('Times', 16))
+txt2.tag_configure('bold', font=('Times', 16, 'bold'))
+                       
+    
 btnExit = tk.Button(root,text="Exit", command=sys.exit)
 frame = tk.Frame(root)
 btn1 = tk.Button(frame,text="Transform simple", command=transform_simple)

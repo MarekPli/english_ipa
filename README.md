@@ -2,7 +2,7 @@
 
 You have to install eng_to_ipa
 
-After copy-paste any English text (replacing buit-in example) simply press the button to receive an answer.
+After copy-paste any English text (replacing built-in example) simply press the button to receive an answer.
 
 ## Transform possibilities:
 
@@ -14,3 +14,5 @@ After copy-paste any English text (replacing buit-in example) simply press the b
 Text example: classic English (American) poetry, you all know who is the autor and which is a title :)
 
 A bar between texts may contain IPA version of selected fragment, if you select one...
+
+![Screenshot](./screenshot.png)
